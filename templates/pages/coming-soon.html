@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+{% load static %}
+<!--
+	Template Name: Bueno - Responsive Bootstrap 4 Multipurpose Template
+	Author: Nifty Theme - Osama Bakri
+	Themeforest Account: https://themeforest.net/user/niftytheme
+	Contact: niftytheme@gmail.com
+	Version: 1.3.0
+	Created: March 2019
+	Purchase: https://themeforest.net/item/bueno-responsive-bootstrap-4-landing-template/22398623
+	License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
+-->
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="author" content="Nift Theme | Osama Bakri">
+  <meta name="description" content="Responsive Bootstrap 4 Multipurpose Template" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="keywords" content="agency, bootstrap, business, corporate, creative, landing page, marketing, multipurpose, product, product launch, responsive, software, startup, startup landing page" />
+  <meta name="theme-color" content="#25c16f">
+
+  	<!--== Start Loading screen ==-->
+	<div class="loading-screen">
+		<div class="main">
+			<div class="lds-grid">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+	</div>
+
+  <!-- page title -->
+  <title>Coming Soon</title>
+  <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/font-awesome.min.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/components/main-components.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/pages/coming-soon.css' %}">
+</head>
+<body>
+  <!-- main contain -->
+  <main>
+    <div class="container">
+      <!-- box -->
+      <div class="box text-center">
+        <!-- logo -->
+        <div class="logo">
+          <img src="{% static 'assets/images/logo.webp' %}" class="img-fluid" alt="">
+        </div>
+        <!-- text contain -->
+        <div class="t-c">
+          {% block h2  %}<h2>coming soon</h2>{% endblock %}
+          <p>Our website is about to lunch preety soon, Be the first to know about that and subscribe today.</p>
+        </div>
+        <!-- contact form -->
+        <form method="GET">
+          <!-- input group -->
+          <div class="input-g">
+            <input type="email" placeholder="Your email" required>
+            <button type="submit">Notify Me</button>
+          </div>
+        </form>
+        <!-- home link -->
+        <a href="{% url 'index' %}" class="h-link">Back to Home page</a>
+        <!-- social links -->
+        <div class="social-links">
+          <ul class="pl-0 m-0">
+            <li>
+              <a href="#"><i class="fa fa-facebook-square"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-linkedin-square"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-telegram"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- lines -->
+    <div class="lines">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </main>
+	<!-- Start Scripts -->
+	<script src="{% static 'assets/js/jquery-3.3.1.min.js' %}"></script> <!-- Jquery File -->
+	<script src="{% static 'assets/js/popper.js' %}"></script> <!-- Popper File -->
+	<script src="{% static 'assets/js/bootstrap.min.js' %}"></script> <!-- Bootstrap File -->
+	<script src="{% static 'assets/js/javaScript.js' %}"></script> <!-- Custome File -->
+
+</body>
+</html>

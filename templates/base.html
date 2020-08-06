@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+{% load static %}
+
+<!--
+	Template Name: Bueno - Responsive Bootstrap 4 Multipurpose Template
+	Author: Nifty Theme - Osama Bakri
+	Themeforest Account: https://themeforest.net/user/niftytheme
+	Contact: niftytheme@gmail.com
+	Version: 1.3.0
+	Created: March 2019
+	Purchase: https://themeforest.net/item/bueno-responsive-bootstrap-4-landing-template/22398623
+	License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
+-->
+    <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Nift Theme | Osama Bakri">
+        <meta name="description" content="Responsive Bootstrap 4 Multipurpose Template" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="keywords" content="agency, bootstrap, business, corporate, creative, landing page, marketing, multipurpose, product, product launch, responsive, software, startup, startup landing page" />
+        <meta name="theme-color" content="#25c16f">
+
+        <!-- Page Title -->
+        {% block title %}<title>TruePrice</title>{% endblock %}
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}" />
+        <!-- FontAwesome CSS -->
+        <link rel="stylesheet" href="{% static 'assets/css/font-awesome.min.css' %}" />
+        <!-- CSS Main Components File -->
+        <link rel="stylesheet" href="{% static 'assets/css/components/main-components.css' %}" />
+        <!-- CSS Style File -->
+        <link rel="stylesheet" href="{% static 'assets/css/style.css' %}" />
+        <link rel="icon" href="{% static 'assets/images/fav.webp' %}" type="image/x-icon">
+    </head>
+
+<body>
+
+	<!--== Start Loading screen ==-->
+	<div class="loading-screen">
+		<div class="main">
+			<div class="lds-grid">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+	</div>
+
+	<!--== Start Nav ==-->
+	<!-- small nav -->
+	<div class="s-nav d-lg-none d-block">
+		<div class="container-fluid">
+			<!-- nav contain -->
+			<div class="nav-contain">
+				<!-- brand -->
+				<a href="{% url 'index' %}" class="brand"></a>
+				<!-- toggle button -->
+				<button id="toggle-nav">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+			</div>
+		</div>
+	</div>
+	<!-- main nav -->
+	<nav>
+		<div class="container">
+			<!-- nav contain -->
+			<div class="nav-contain">
+				<!-- brand -->
+				<a class="brand" href="{% url 'index' %}">TruePrice</a>
+				<!-- nav item contain -->
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'feedback' %}">FeedBack</a>
+					</li>
+					{% if user.is_authenticated %}
+					<li class="nav-item dropdown">
+						<a class="nav-link" href="#" onclick="return false;">Resources</a>
+						<!-- Dropdown List -->
+						<ol class="p-0">
+							<li><a href="pages/coming-soon.html">Support</a></li>
+							<li><a href="{% url 'contact' %}" target="_blank">Contact</a></li>
+							<li><a href="pages/coming-soon.html">Privacy &amp; Terms</a></li>
+							<li><a href="pages/coming-soon.html">Sitemap</a></li>
+						</ol>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link" href="#" onclick="return false;">Account</a>
+						<!-- Dropdown List -->
+						<ol class="p-0">
+							<li><a href="pages/coming-soon.html">My Posts</a></li>
+							<li><a href="{% url 'contact' %}" target="_blank">Saved Forms</a></li>
+							<li><a href="{% url 'password_change' %}">Change Password</a></li>
+							<li><a href="{% url 'logout' %}">Logout</a></li>
+						</ol>
+					</li>
+					{% else %}
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'login' %}">Login</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'signup' %}">Signup</a>
+					</li>
+					{% endif %}
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	{% block content %}
+	{% endblock %}
+
+
+    <!--== Start Footer ==-->
+	<footer class="p-70">
+		<div class="container">
+			<!-- newsletter -->
+			<div class="newsletter">
+				<!-- row -->
+				<div class="row align-items-center">
+					<!-- col -->
+					<div class="col-lg-6">
+						<!-- text contain -->
+						<div class="t-c">
+							<h4>Get the latest from Hyfler Studios</h4>
+							<p class="mb-0">Receive news, announcements, and reports.</p>
+						</div>
+					</div>
+					<!-- col -->
+					<div class="col-lg-6">
+						<!-- form -->
+						<form>
+							<input type="email" placeholder="osamabakri@example.com" required>
+							<button type="submit">subscribe</button>
+						</form>
+					</div>
+				</div>
+			</div>
+				</div>
+			</div>
+			<!-- copyright -->
+			<div class="copyright">
+				<p class="mb-0">2020 &copy; TruePrice. Developed by <a href="#">Hyfler Studios</a></p>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Start Scripts -->
+	<script src="{% static 'assets/js/jquery-3.3.1.min.js' %}"></script> <!-- Jquery File -->
+	<script src="{% static 'assets/js/popper.js' %}"></script> <!-- Popper File -->
+	<script src="{% static 'assets/js/bootstrap.min.js' %}"></script> <!-- Bootstrap File -->
+	<script src="{% static 'assets/js/javaScript.js' %}"></script> <!-- Custome File -->
+
+</body>
+</html>

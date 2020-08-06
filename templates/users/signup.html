@@ -1,0 +1,56 @@
+{% extends 'reset_base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block title %}<title>Sign Up</title>{% endblock %}
+{% block content %}
+<!-- <form action="" method="post">
+	{{ form.as_p }}
+</form> -->
+<body id="login-page">
+	<!--== Start Main ==-->
+	<main class="text-center">
+		<div class="container">
+			<!-- box -->
+			<div class="box">
+				<!-- logo -->
+				<div class="logo">
+					<img src="{% static 'assets/images/logo.webp' %}" class="img-fluid" alt="">
+				</div>
+				<!-- form contain -->
+				<div class="form-contain">
+					<!-- sign in form -->
+					<form method="POST" id="sign-in-form">
+						{% csrf_token %}
+						<!-- form name -->
+						<h4 class="name">create account</h4>
+						<!-- input group -->
+						<div class="input-g">
+							{{ form|crispy }}
+						</div>
+						<!-- input group -->
+						<div class="input-g">
+							<!-- row -->
+							<div class="row">
+								<!-- col -->
+								<div class="col-12 text-left">
+									<label class="control control-checkbox">I Agree the terms and conditions.
+										<input type="checkbox">
+										<span class="control_indicator"></span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<!-- button group -->
+						<div class="btn-g">
+							<button type="submit">Sign Up</button>
+						</div>
+						<!-- form footer -->
+						<div class="form-footer">
+							<p class="mb-0">I have an account<a href="{% url 'login' %}" data-show="#sign-in-form" onclick="return true;" class="ml-2 form-control-btn">Sign In</a></p>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</main>
+{% endblock %}

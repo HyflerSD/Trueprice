@@ -1,0 +1,226 @@
+/*
+- ------------------------------------------------------------------------ -
+* Template Name    : Bueno | Responsive Bootstrap 4 Multipurpose Template  *
+* Author           : Nifty Theme - Osama Bakri                             *
+* Version          : 1.3.0                                            		 *
+* Created          : March 2019                                       		 *
+* File Description : Coming soon Css file of the template                  *
+- ------------------------------------------------------------------------ -
+
+- ------------------------- -
+  1. Box               	    *
+  2. Media Query						*
+- ------------------------- -
+
+--------------------------------------------------------------------------*/
+body {
+  min-height: 100vh;
+  /* display */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+/*=== 1.Box ==========================================*/
+body .box {
+  position: relative;
+  z-index: 2;
+}
+/* logo */
+body .box .logo img {
+  max-width: 120px;
+  margin-bottom: 20px;
+}
+/* text contain */
+body .box .t-c h2 {
+  font-size: 60px;
+  text-transform: uppercase;
+  color: var(--typeColor);
+  font-weight: 700;
+}
+body .box .t-c p {
+  font-size: 18px;
+  margin-bottom: 0;
+  color: var(--pColor);
+  max-width: 600px;
+}
+/* contact form */
+body .box form {
+  margin: 30px auto ;
+  max-width: 500px;
+}
+body .box form .input-g {
+  position: relative;
+}
+body .box form .input-g input {
+  width: 100%;
+  height: 46px;
+  padding: 10px;
+  font-size: 16px;
+  outline: none;
+  font-weight: 500;
+  border-radius: 2px;
+  border: 1px solid var(--border-color);
+  color: var(--typeColor);
+}
+body .box form .input-g input::-webkit-input-placeholder {
+  color: var(--pColor);
+  font-weight: 500;
+  opacity: .5;
+}
+body .box form .input-g input::-moz-placeholder {
+  color: var(--pColor);
+  font-weight: 500;
+  opacity: .5;
+}
+body .box form .input-g input:-ms-input-placeholder {
+  color: var(--pColor);
+  font-weight: 500;
+  opacity: .5;
+}
+body .box form .input-g input::-ms-input-placeholder {
+  color: var(--pColor);
+  font-weight: 500;
+  opacity: .5;
+}
+body .box form .input-g input::placeholder {
+  color: var(--pColor);
+  font-weight: 500;
+  opacity: .5;
+}
+body .box form .input-g button {
+  position: absolute;
+  right: 3px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: 40px;
+  width: 120px;
+  border-radius: 2px;
+  border: 1px solid var(--border-color);
+  background: var(--mainColor);
+  color: #fff;
+  font-size: 16px;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+body .box form .input-g button:hover {
+  background: var(--darColor);
+}
+/* home link */
+body .box .h-link {
+  display: inline-block;
+  margin-bottom: 30px;
+  color: var(--typeColor);
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration: underline !important;
+}
+/* social links */
+body .box .social-links ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background: #fff;
+}
+body .box .social-links li {
+  list-style: none;
+  margin: 0 10px;
+
+}
+body .box .social-links li a i {
+  font-size: 26px;
+  color: var(--typeColor);
+  -webkit-transition: color .2s ease-in-out;
+  transition: color .2s ease-in-out;
+}
+body .box .social-links li a:hover i {
+  color: var(--mainColor);
+}
+/* Lines */
+body .lines {
+	position: absolute;
+	height: 100%;
+	top: 0;
+	width: 100%;
+	left: 0;
+	z-index: 1
+}
+body .lines > span {
+	height: 1px;
+	width: 187px;
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	position: absolute
+}
+body .lines > span:nth-child(1) {
+	left: -28px;
+	top: 65px;
+	background: -webkit-gradient(linear,left top, right top,color-stop(5%, #fb9291),color-stop(95%, #ffb081));
+	background: linear-gradient(to right,#fb9291 5%,#ffb081 95%);
+}
+body .lines > span:nth-child(2) {
+	right: -24px;
+	bottom: 59px;
+	width: 167px;
+	background: -webkit-gradient(linear,left top, right top,color-stop(5%, #6347ff),color-stop(95%, #3892ff));
+	background: linear-gradient(to right,#6347ff 5%,#3892ff 95%);
+}
+body .lines > span:nth-child(3) {
+	width: 261px;
+	left: 0;
+	bottom: 92px;
+	background: -webkit-gradient(linear,left top, right top,color-stop(5%, #5b55ff),color-stop(95%, #32b3ff));
+	background: linear-gradient(to right,#5b55ff 5%,#32b3ff 95%);
+}
+body .lines > span:nth-child(4) {
+	width: 45px;
+	left: 72%;
+	top: 85px;
+	background: -webkit-gradient(linear,left top, right top,color-stop(5%, rgba(91,85,255,0.57)),color-stop(95%, rgba(50,179,255,0.54)));
+	background: linear-gradient(to right,rgba(91,85,255,0.57) 5%,rgba(50,179,255,0.54) 95%);
+}
+body .lines > span:nth-child(5) {
+	width: 150px;
+	left: calc(50%+271px);
+	top: 36%;
+	background: -webkit-gradient(linear,left top, right top,color-stop(5%, rgba(91,85,255,0.57)),color-stop(95%, rgba(50,179,255,0.54)));
+	background: linear-gradient(to right,rgba(91,85,255,0.57) 5%,rgba(50,179,255,0.54) 95%);
+}
+body .lines > span:nth-child(6) {
+	width: 100px;
+	left: 221px;
+	top: 150px;
+	background: -webkit-gradient(linear,left top, right top,color-stop(5%, rgba(251,146,145,0.75)),color-stop(95%, rgba(255,176,129,0.65)));
+	background: linear-gradient(to right,rgba(251,146,145,0.75) 5%,rgba(255,176,129,0.65) 95%);
+}
+body .lines > span:nth-child(7) {
+	width: 65px;
+	right: 131px;
+	top: 200px;
+	background: -webkit-gradient(linear,left top, right top,color-stop(5%, rgba(91,85,255,0.57)),color-stop(95%, rgba(50,179,255,0.54)));
+	background: linear-gradient(to right,rgba(91,85,255,0.57) 5%,rgba(50,179,255,0.54) 95%);
+}
+
+/*=== 2.media query =================================*/
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+  body .box .t-c h2 {
+    font-size: 40px;
+  }
+  body .box .logo img {
+    max-width: 90px;
+  }
+}
