@@ -1,1 +1,1 @@
-web: gunicorn eefffkk.wsgi
+web: gunicorn TruePrice.wsgi
