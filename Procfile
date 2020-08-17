@@ -1,1 +1,1 @@
-web: gunicorn TruePrice.wsgi
+web: gunicorn trueprice_project.wsgi
