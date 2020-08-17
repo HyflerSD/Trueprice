@@ -26,7 +26,7 @@ SECRET_KEY = 'a4mkrpst5l27(te6%q@t-tfvacy6p+(6a#ora2hv*o6q5db!*w'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -152,7 +152,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'staticfiles')
+    os.path.join(BASE_DIR, 'static')
 ]
 
 LOGIN_REDIRECT_URL = 'index'
