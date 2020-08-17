@@ -25,12 +25,15 @@ class HomePageView(TemplateView):
     def post(self, request):
         form = CarCalculatorForm(request.POST)
         if form.is_valid():
+            form.save()
             car_price = form.cleaned_data["car_price"]
             tax_rate = float(form.cleaned_data["tax_rate"])
             downpayment = form.cleaned_data["down_payment"]
             loan_term = form.cleaned_data["loan_term_in_years"]
             apr = float(form.cleaned_data["interest_rate"])
             trade_value = form.cleaned_data["trade_in_value"]
+            # if use
+            
             if 'calc' in request.POST:
                 loan_amount = int(((tax_rate*0.01) * (car_price)) + car_price) - (downpayment + trade_value)
                 interest = ((apr * 0.01)/12)
@@ -73,6 +76,9 @@ class FeedBackPageView(TemplateView):
 
     def post(self, request):
         form = FeedBackForm(request.POST)
+        name = form.cleaned_data["name"]
+        email = form.changed_data["email"]
+        comment = form.cleaned_data["comment"]
         if form.is_valid():
             return render(request, 'index.html')
 

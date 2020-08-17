@@ -1,7 +1,8 @@
 from django import forms
 from django.forms import  ModelForm
+from users.models import CarCalculatorModel
 
-class CarCalculatorForm(forms.Form):
+class CarCalculatorForm(forms.ModelForm):
     car_price = forms.IntegerField(
         label = 'Car Price',
         required=True,
@@ -41,6 +42,9 @@ class CarCalculatorForm(forms.Form):
         min_value=0,
         initial=0,
     )
+    class Meta:
+        model = CarCalculatorModel
+        fields = '__all__'
 
 class FeedBackForm(forms.Form):
     name = forms.CharField(
@@ -48,3 +52,7 @@ class FeedBackForm(forms.Form):
         max_length=50)
     email = forms.EmailField(required=True)
     comment = forms.CharField(widget=forms.Textarea)
+
+class PersonForm(forms.ModelForm):
+    first_name = forms.CharField(max_length=50)
+    last_name = forms.CharField(max_length=50)

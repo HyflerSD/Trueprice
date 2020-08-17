@@ -10,6 +10,7 @@ django = "==3.0.8"
 django-crispy-forms = "*"
 django-simple-feedback-form = "*"
 django-libs = "*"
+psycopg2 = "*"
 
 [requires]
 python_version = "3.7"

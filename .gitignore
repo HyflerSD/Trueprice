@@ -145,4 +145,7 @@ dmypy.json
 # pytype static type analyzer
 .pytype/
 
+# secrets
+secrets.py
+
 # End of https://www.toptal.com/developers/gitignore/api/django
